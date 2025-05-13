@@ -1,6 +1,6 @@
 import styles from './productCard.module.css'
 
-const ProductCard = ({ product }) => {
+const ProductCard = ({ product, addToCart }) => {
     return (
       <article className= {styles["product-card"]} id={product.id}>
         {/* Imagen del producto */}
@@ -15,7 +15,9 @@ const ProductCard = ({ product }) => {
   
         {/* Botones */}
         <div className={styles["product-buttons"]}>
-          <button className= {`${styles.button}  ${styles["button-primary"]}`}>
+          <button className= {`${styles.button}  ${styles["button-primary"]}`}
+          name='addToCart'
+          onClick={addToCart}>
             <img src="/assets/icon-add-to-cart.svg" alt="Add to cart" />
             Add to Cart
           </button>
