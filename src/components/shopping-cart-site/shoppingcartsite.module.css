@@ -3,7 +3,17 @@
     gap: 1.125rem;
     margin-bottom: 1.625rem;
 }
-
+.filter{
+  width: 76px;
+  height: 34px;
+  border-radius: 30px;
+  background-color: #FFF;
+  border: 1px solid #AD8A85;
+}
+.filter-active{
+  background-color: var(--selected-product-color);
+  color: #FFF;
+}
 .gallery{
     display: grid;
     grid-template-columns: repeat(1, 1fr);
