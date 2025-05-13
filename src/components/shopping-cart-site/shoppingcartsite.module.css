@@ -1,0 +1,36 @@
+.filter-box{
+    display: flex;
+    gap: 1.125rem;
+    margin-bottom: 1.625rem;
+}
+
+.gallery{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 24px;
+    margin-bottom: 32px;
+}
+
+@media screen and (min-width: 768px) {
+  .gallery {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    margin-bottom: 79px;
+    justify-content: center;
+  }
+}
+
+@media screen and (min-width: 1040px) {
+  .main-container {
+    display: flex;
+  }
+  .gallery {
+    margin-right: 30px;
+  }
+}
+.product-card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 16px;
+}

@@ -1,10 +1,9 @@
-import Button from "./components/button/Button";
+import ShoppingCartSite from "./components/shopping-cart-site/ShoppingCartSite";
 
 const App = () => {
   return (
     <>
-      <h1>Template React</h1>
-      <Button />
+    <ShoppingCartSite></ShoppingCartSite>
     </>
   );
 };
