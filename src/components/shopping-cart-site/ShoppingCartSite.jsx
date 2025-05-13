@@ -51,6 +51,8 @@ const ShoppingCartSite = () => {
                 key={product.id}
                 product={product}
                 addToCart={() => addProduct(product, cartItem, setCartItem)}
+                decreaseQuantity ={()=> subtractamountOfProduct(product, cartItem, setCartItem)} 
+                increaseQuantity= {() => addamountOfProduct (product, cartItem, setCartItem)}
               />
             ))}
           </article>
@@ -80,4 +82,36 @@ const addProduct = (product, cartItem, setCartItem) => {
     setCartItem([...cartItem, { ...product, quantity: 1 }]);
     console.log('Carrito después de agregar el nuevo producto:', [...cartItem, { ...product, quantity: 1 }]);}
 };
+
+const addamountOfProduct = (product, cartItem, setCartItem) => {
+  const existingProduct = confirmProductInCart(product, cartItem);
+
+  if (existingProduct) {
+    setCartItem(
+      cartItem.map(item =>
+        item.id === product.id
+          ? { ...item, quantity: item.quantity + 1 }
+          : item
+      )
+    );
+  }
+ console.log('Carrito (antes de actualización real):', cartItem);
+};
+
+const subtractamountOfProduct = (product, cartItem, setCartItem) => {
+  const existingProduct = confirmProductInCart(product, cartItem);
+
+  if (existingProduct) {
+    setCartItem(
+      cartItem.map(item =>
+        item.id === product.id
+          ? { ...item, quantity: item.quantity - 1 }
+          : item
+      )
+    );
+  }
+ console.log('Carrito (antes de actualización real):', cartItem);
+};
+
+
 export default ShoppingCartSite;

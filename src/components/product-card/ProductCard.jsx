@@ -1,6 +1,6 @@
 import styles from './productCard.module.css'
 
-const ProductCard = ({ product, addToCart }) => {
+const ProductCard = ({ product, addToCart, cartItem, increaseQuantity, decreaseQuantity}) => {
     return (
       <article className= {styles["product-card"]} id={product.id}>
         {/* Imagen del producto */}
@@ -23,11 +23,17 @@ const ProductCard = ({ product, addToCart }) => {
           </button>
   
           <div className={`${styles.button} ${styles["button-secondary"]}`}>
-            <button className= {styles["cartbutton-icon"]}>
+            <button 
+             name='decreaseQuantity'
+            onClick={decreaseQuantity}
+            className= {styles["cartbutton-icon"]}>
               <img src="/assets/icon-decrement-quantity.svg" alt="Decrease" />
             </button>
             <span>1</span>
-            <button className= {styles["cartbutton-icon"]}>
+            <button 
+            name='increaseQuantity'
+             onClick={increaseQuantity}
+            className= {styles["cartbutton-icon"]}>
               <img src="/assets/icon-increment-quantity.svg" alt="Increase" />
             </button>
           </div>
@@ -42,5 +48,6 @@ const ProductCard = ({ product, addToCart }) => {
       </article>
     );
   };
+  //{cartItem.quantity}
   
   export default ProductCard
