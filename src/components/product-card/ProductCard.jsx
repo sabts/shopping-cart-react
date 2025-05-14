@@ -1,6 +1,4 @@
 import styles from "./productCard.module.css";
-const buttons = ["addToCart", "controlquantity"];
-/* amountOfProduct*/
 
 const ProductCard = ({
   product,
@@ -10,7 +8,7 @@ const ProductCard = ({
   cart,
 }) => {
   const productInCart = cart.find(item => item.id === product.id);
-
+  //productExist = productIncart ?{styles[nombre del estilo]} :{style[nombre del otro estilo]}
   return (
     <article className={styles["product-card"]} id={product.id}>
       {/* Imagen del producto */}

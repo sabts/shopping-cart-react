@@ -3,6 +3,7 @@ import { FILTERS } from "../../constants/filters";
 import ProductCard from "../product-card/ProductCard";
 import styles from "./shoppingcartsite.module.css";
 import { useState } from "react";
+import Cart from "../cart/Cart";
 
 const ShoppingCartSite = () => {
   const [filter, setFilter] = useState(FILTERS.default);
@@ -61,6 +62,9 @@ const ShoppingCartSite = () => {
               />
             ))}
           </article>
+        </section>
+        <section>
+          <Cart />
         </section>
       </main>
     </>
