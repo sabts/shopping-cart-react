@@ -66,6 +66,7 @@ const ShoppingCartSite = () => {
           <Cart 
           product={PRODUCTS}
           cart={cart}
+          deteleItem ={(product) => removeProductInCart(product, cart, setCart)}
           />
       </main>
     </>
@@ -123,4 +124,8 @@ const subtractamountOfProduct = (product, cart, setCart) => {
   console.log("Carrito -:", cart);
 };
 
+const removeProductInCart = (product, cart, setCart) => {
+  cart = cart.filter(item => item.id !== product.id);
+  setCart(cart);
+}
 export default ShoppingCartSite;
