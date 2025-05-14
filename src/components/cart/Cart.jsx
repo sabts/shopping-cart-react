@@ -32,13 +32,13 @@ const Cart = ({
             <span className={styles["price-by-unit"]}> {item.price} </span>
             <span className={styles["total-product-price"]}> total item price </span>
              </div>
+             </div>
              <button className={styles["icon-remove-item"]}>
           <img
             src="/assets/icon-remove-item.svg"
             alt="delete product from cart"
           />
         </button>
-             </div>
              </div>
           ))}
           </div>
