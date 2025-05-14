@@ -76,46 +76,46 @@ const getFilteredProducts = (products, filter) => {
   return products; // Default
 };
 
-const confirmProductInCart = (product, cartItem) => {
-  return cartItem.find(item => item.id === product.id);
+const confirmProductInCart = (product, cart) => {
+  return cart.find(item => item.id === product.id);
 };
 
-const addProduct = (product, cartItem, setCartItem) => {
-  const existingProduct = confirmProductInCart(product, cartItem);
+const addProduct = (product, cart, setCart) => {
+  const existingProduct = confirmProductInCart(product, cart);
 
   if (!existingProduct) {
-    setCartItem([...cartItem, { ...product, quantity: 1 }]);
-    console.log("Carrito después de agregar el nuevo producto:", [
-      ...cartItem,
-      { ...product, quantity: 1 },
-    ]);
+    setCart([...cart, { ...product, quantity: 1 }]);
+    console.log("Carrito después de agregar el producto:", cart);
   }
 };
 
-const addamountOfProduct = (product, cartItem, setCartItem) => {
-  const existingProduct = confirmProductInCart(product, cartItem);
+const addamountOfProduct = (product, cart, setCart) => {
+  const existingProduct = confirmProductInCart(product, cart);
 
   if (existingProduct) {
-    setCartItem(
-      cartItem.map(item =>
+    setCart(
+      cart.map(item =>
         item.id === product.id ? { ...item, quantity: item.quantity + 1 } : item
       )
     );
   }
-  console.log("Carrito +:", cartItem);
+  console.log("Carrito +:", cart);
 };
 
-const subtractamountOfProduct = (product, cartItem, setCartItem) => {
-  const existingProduct = confirmProductInCart(product, cartItem);
+const subtractamountOfProduct = (product, cart, setCart) => {
+  const existingProduct = confirmProductInCart(product, cart);
 
   if (existingProduct) {
-    setCartItem(
-      cartItem.map(item =>
+    setCart(
+      cart.map(item =>
         item.id === product.id ? { ...item, quantity: item.quantity - 1 } : item
       )
     );
+    if (existingProduct.quantity <= 1) {
+      setCart(cart.filter(item => item.id !== product.id));
+    }
   }
-  console.log("Carrito -:", cartItem);
+  console.log("Carrito -:", cart);
 };
 
 export default ShoppingCartSite;

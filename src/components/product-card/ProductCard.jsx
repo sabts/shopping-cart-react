@@ -10,8 +10,6 @@ const ProductCard = ({
   cart,
 }) => {
   const productInCart = cart.find(item => item.id === product.id);
-  const productQuantity = cart.quantity;
-  console.log(productQuantity);
 
   return (
     <article className={styles["product-card"]} id={product.id}>
@@ -58,6 +56,7 @@ const ProductCard = ({
               <img src="/assets/icon-increment-quantity.svg" alt="Increase" />
             </button>
           </div>
+          //  if(productInCart.quantity === 0) !productInCart &&
         )}
       </div>
 
