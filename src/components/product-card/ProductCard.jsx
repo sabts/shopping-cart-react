@@ -37,6 +37,7 @@ const ProductCard = ({ product, addToCart, cartItem, increaseQuantity, decreaseQ
               <img src="/assets/icon-increment-quantity.svg" alt="Increase" />
             </button>
           </div>
+          
         </div>
   
         {/* Texto del producto */}
