@@ -63,9 +63,10 @@ const ShoppingCartSite = () => {
             ))}
           </article>
         </section>
-        <section>
-          <Cart />
-        </section>
+          <Cart 
+          product={PRODUCTS}
+          cart={cart}
+          />
       </main>
     </>
   );
