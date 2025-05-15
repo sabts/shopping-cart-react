@@ -29,13 +29,12 @@
     justify-content: center;
   }
 }
-
-@media screen and (min-width: 1040px) {
-  .main-container {
-    display: flex;
+@media screen and (width>1040px){
+  .main-container{
+      display: flex;
   }
-  .gallery {
-    margin-right: 30px;
+  .gallery{
+      margin-right: 30px;
   }
 }
 .product-card{

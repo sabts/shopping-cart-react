@@ -8,11 +8,14 @@ const ProductCard = ({
   cart,
 }) => {
   const productInCart = cart.find(item => item.id === product.id);
-  //productExist = productIncart ?{styles[nombre del estilo]} :{style[nombre del otro estilo]}
+  const productSelected = productInCart
+  ? `${styles["product-picture-selected"]} ${styles["product-picture"]}`
+  : styles["product-picture"];
+
   return (
     <article className={styles["product-card"]} id={product.id}>
       {/* Imagen del producto */}
-      <div className={styles["product-picture"]}>
+      <div className={productSelected}>
         <picture>
           <source media="(min-width: 1040px)" srcSet={product.imgDesktop} />
           <source media="(min-width: 768px)" srcSet={product.imgTablet} />

@@ -44,7 +44,7 @@ const ShoppingCartSite = () => {
           </button>
         </div>
       </header>
-      <main>
+      <main  className={styles["main-container"]}>
         <section>
           <article className={styles["gallery"]}>
             {filteredProducts.map(product => (

@@ -8,9 +8,9 @@
     margin-bottom: -40px;
     border-radius: 8px;
 }
-.product-picture-selected {
+.product-picture-selected{
     border-radius: 8px;
-    border: 1px solid var(--selected-product-boder-color);
+    border: 2px solid var(--selected-product-border-color);
 }
 .product-buttons{
     display: flex;
