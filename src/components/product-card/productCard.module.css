@@ -8,6 +8,7 @@
     margin-bottom: -40px;
     border-radius: 8px;
 }
+
 .product-picture-selected{
     border-radius: 8px;
     border: 2px solid var(--selected-product-border-color);

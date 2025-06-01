@@ -8,7 +8,7 @@ const ProductCard = ({
   cart,
 }) => {
   const productInCart = cart.find(item => item.id === product.id);
-  const productSelected = productInCart
+  const productSelected = productInCart 
   ? `${styles["product-picture-selected"]} ${styles["product-picture"]}`
   : styles["product-picture"];
 

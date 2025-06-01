@@ -42,7 +42,7 @@
     padding: 16px 24px;
 }
 }
-@media screen and (width>1040px){
+@media screen and (width>1024px){
   .main-container{
       display: flex;
   }
