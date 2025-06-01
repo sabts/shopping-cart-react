@@ -4,6 +4,7 @@ import ProductCard from "../product-card/ProductCard";
 import styles from "./shoppingcartsite.module.css";
 import { useState } from "react";
 import Cart from "../cart/Cart";
+import Header from "../header/Header";
 
 const ShoppingCartSite = () => {
   const [filter, setFilter] = useState(FILTERS.default);
@@ -13,8 +14,8 @@ const ShoppingCartSite = () => {
 
   return (
     <>
-      <header>
-        <h1>Desserts</h1>
+    <Header />
+      <section>
         <div className={styles["filter-box"]}>
           <button
             className={`${styles.filter} ${
@@ -43,7 +44,7 @@ const ShoppingCartSite = () => {
             Price
           </button>
         </div>
-      </header>
+      </section>
       <main  className={styles["main-container"]}>
         <section>
           <article className={styles["gallery"]}>

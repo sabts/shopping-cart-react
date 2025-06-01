@@ -1,7 +1,14 @@
+.main-container{
+  display: flex;
+  flex-direction: column;
+  padding: 16px 24px;
+}
+
 .filter-box{
     display: flex;
+    justify-content: center;
     gap: 1.125rem;
-    margin-bottom: 1.625rem;
+    padding: 10px;
 }
 .filter{
   width: 76px;
@@ -28,6 +35,12 @@
     margin-bottom: 79px;
     justify-content: center;
   }
+  .filter-box{
+    display: flex;
+    justify-content: flex-start;
+    gap: 1.125rem;
+    padding: 16px 24px;
+}
 }
 @media screen and (width>1040px){
   .main-container{
